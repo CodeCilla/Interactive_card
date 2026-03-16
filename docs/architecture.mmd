@@ -29,19 +29,8 @@ classDiagram
         -City city
     }
 
-%% Relations avec noms de variables (rôles) et cardinalités
-
-%% Le repository contient la collection de villes
     CityRepository "1" --> "*" City : cities
-
-%% L'implémentation du service possède une instance du repository
     CityServiceImpl "1" --> "1" CityRepository : repository
-
-%% Le service produit/utilise des DTOs (souvent gérés en liste dans les méthodes)
     CityServiceImpl "1" ..> "*" CityResponseDTO : results
-
-%% Le DTO contient une référence à l'objet City original (pour les détails au survol)
     CityResponseDTO "*" --> "1" City : city
-
-%% Relation d'héritage/implémentation (pas de variable ici)
     CityServiceImpl ..|> CityService
