@@ -1,8 +1,10 @@
 #!/bin/bash
-
 set -e
-psql -U postgres -d postgres -a -f /data/seed.sql
-echo "Database initialized successfully."
 
-psql -U postgres -d postgres -c "COPY cities FROM '/data/cities.csv' DELIMITER ',' CSV HEADER;"
-echo "Database seeded successfully."
+
+psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -a -f /docker-entrypoint-initdb.d/seed.sql
+echo "--- Structure cities créée avec succès ---"
+
+
+psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "COPY cities(id, geom, name, population, region) FROM '/docker-entrypoint-initdb.d/cities.csv' DELIMITER ',' CSV HEADER;"
+echo "--- Importation des données terminée ---"

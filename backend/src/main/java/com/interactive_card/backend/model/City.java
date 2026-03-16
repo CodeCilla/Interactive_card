@@ -5,7 +5,7 @@ import lombok.Data;
 import org.locationtech.jts.geom.Point;
 
 @Entity
-@Table(name = "cities")
+@Table(name = "cities", schema = "public")
 @Data
 public class City {
     @Id

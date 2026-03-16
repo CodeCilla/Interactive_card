@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="252609ea-d53e-4d48-baeb-142f699c0b08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/model/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/config/JacksonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/controller/CityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/repository/CityRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/backend/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/init.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/seed.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/seed.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/model/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +86,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\prisc\Documents\PRISCILLA\DEVELOPPEMENT_WEB\CDA\M03 Développement de composants métier\interactive_card\backend\src\main\java\com\interactive_card\backend" />
       <recent name="C:\Users\prisc\Documents\PRISCILLA\DEVELOPPEMENT_WEB\CDA\M03 Développement de composants métier\interactive_card\backend" />
       <recent name="C:\Users\prisc\Documents\PRISCILLA\DEVELOPPEMENT_WEB\CDA\M03 Développement de composants métier\interactive_card" />
       <recent name="C:\Users\prisc\Documents\PRISCILLA\DEVELOPPEMENT_WEB\CDA\M03 Développement de composants métier\interactive_card\backend\database" />
