@@ -21,4 +21,12 @@ public class CityController {
     public List<City> getAllCities() {
         return cityRepository.findAll();
     }
+    @GetMapping("/regions")
+    public List<String> getRegions() {
+        return cityRepository.findDistinctRegions();
+    }
+    @GetMapping
+    public List<City> getCities(@RequestParam(name = "minPop", defaultValue = "0") int minPop) {
+        return cityRepository.findByMinPopulation(minPop);
+    }
 }
