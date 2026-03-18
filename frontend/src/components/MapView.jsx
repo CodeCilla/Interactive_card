@@ -22,7 +22,6 @@ let DefaultIcon = L.icon({
     iconAnchor: [12, 41]
 });
 
-// Icône personnalisée pour le clic (ex: couleur rouge via un filtre CSS ou une URL différente)
 const clickedIcon = L.icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
     shadowUrl: iconShadow,
@@ -34,7 +33,10 @@ const clickedIcon = L.icon({
 
 L.Marker.prototype.options.icon = DefaultIcon;
 
-const MapView = ({ cities, clickedCoords, onMapClick }) => {
+const MapView = ({ cities, clickedCoords, radius, onMapClick }) => {
+    // On s'assure d'avoir une valeur par défaut si radius est undefined
+    const displayRadius = (radius || 100) * 1000;
+
     return (
         <div className="map-view-container">
             <MapContainer center={[46.6, 2.2]} zoom={6} className="leaflet-container">
@@ -58,7 +60,9 @@ const MapView = ({ cities, clickedCoords, onMapClick }) => {
                         <Marker position={clickedCoords} icon={clickedIcon} />
                         <Circle
                             center={clickedCoords}
-                            radius={radius*1000}
+                            /* CORRECTION : On utilise la prop 'radius' reçue d'App.jsx */
+                            /* Et on multiplie par 1000 car Leaflet attend des mètres */
+                            radius={displayRadius}
                             pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.15 }}
                         />
                     </>

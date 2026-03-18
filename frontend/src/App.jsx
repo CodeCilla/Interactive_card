@@ -52,6 +52,7 @@ const App = () => {
                     cities={cities}
                     clickedCoords={clickedCoords}
                     onMapClick={setClickedCoords}
+                    radius={filters.radius}
                 />
             </div>
             <div className="sidebar">
