@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MapView from './components/MapView';
 import Filters from './components/Filters';
+import CityList from './components/CityList'; // 1. Import du nouveau composant
 import './App.css';
 
 const App = () => {
@@ -63,6 +64,14 @@ const App = () => {
                     clickedCoords={clickedCoords}
                     onReset={() => setClickedCoords(null)}
                 />
+
+                {/* 2. Intégration de la liste des villes sous les filtres */}
+                {clickedCoords && (
+                    <CityList
+                        cities={cities}
+                        clickedCoords={clickedCoords}
+                    />
+                )}
             </div>
         </div>
     );

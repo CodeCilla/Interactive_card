@@ -18,6 +18,17 @@ public class City {
 
     private String region;
 
+    @Transient
+    private Double distance;
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
     @Column(columnDefinition = "geometry(Point, 4326)")
     private Point geom;
 }
