@@ -18,15 +18,19 @@ public class CityController {
     }
 
     @GetMapping
-    public List<City> getAllCities() {
-        return cityRepository.findAll();
+    public List<City> getCities(
+            @RequestParam(name = "minPop", defaultValue = "0") int minPop,
+            @RequestParam(name = "region", defaultValue = "") String region,
+            @RequestParam(name = "limit", defaultValue = "100") int limit,
+            @RequestParam(name = "lat", required = false) Double lat,
+            @RequestParam(name = "lon", required = false) Double lon,
+            @RequestParam(name = "radius", defaultValue = "100") double radius
+    ) {
+        return cityRepository.findFilteredCities(minPop, region, limit, lat, lon, radius);
     }
+
     @GetMapping("/regions")
     public List<String> getRegions() {
         return cityRepository.findDistinctRegions();
-    }
-    @GetMapping
-    public List<City> getCities(@RequestParam(name = "minPop", defaultValue = "0") int minPop) {
-        return cityRepository.findByMinPopulation(minPop);
     }
 }
