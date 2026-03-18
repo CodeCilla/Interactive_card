@@ -58,8 +58,8 @@ const MapView = ({ cities, clickedCoords, onMapClick }) => {
                         <Marker position={clickedCoords} icon={clickedIcon} />
                         <Circle
                             center={clickedCoords}
-                            radius={50000} // Rayon en mètres (ici 50km)
-                            pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.2 }}
+                            radius={radius*1000}
+                            pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.15 }}
                         />
                     </>
                 )}

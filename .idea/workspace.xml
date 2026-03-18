@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="252609ea-d53e-4d48-baeb-142f699c0b08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/MapView.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/MapView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/controller/CityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/repository/CityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Filters.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Filters.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Map.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Filters.css" afterDir="false" />
-    </list>
+    <list default="true" id="252609ea-d53e-4d48-baeb-142f699c0b08" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
