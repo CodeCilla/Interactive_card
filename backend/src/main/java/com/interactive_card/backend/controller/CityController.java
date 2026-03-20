@@ -1,8 +1,9 @@
 package com.interactive_card.backend.controller;
 
 import com.interactive_card.backend.model.City;
-import com.interactive_card.backend.repository.CityRepository;
+import com.interactive_card.backend.service.CityService;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -10,10 +11,10 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 public class CityController {
 
-    private final CityRepository cityRepository;
+    private final CityService cityService;
 
-    public CityController(CityRepository cityRepository) {
-        this.cityRepository = cityRepository;
+    public CityController(CityService cityService) {
+        this.cityService = cityService;
     }
 
     @GetMapping
@@ -25,11 +26,11 @@ public class CityController {
             @RequestParam(name = "lon", required = false) Double lon,
             @RequestParam(name = "radius", defaultValue = "100") double radius
     ) {
-        return cityRepository.findFilteredCities(minPop, region, limit, lat, lon, radius);
+        return cityService.getFilteredCities(minPop, region, limit, lat, lon, radius);
     }
 
     @GetMapping("/regions")
     public List<String> getRegions() {
-        return cityRepository.findDistinctRegions();
+        return cityService.getDistinctRegions();
     }
 }
