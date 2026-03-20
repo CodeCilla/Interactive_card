@@ -3,7 +3,6 @@ package com.interactive_card.backend.controller;
 import com.interactive_card.backend.model.City;
 import com.interactive_card.backend.repository.CityRepository;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController

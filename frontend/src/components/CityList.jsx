@@ -22,20 +22,17 @@ const CityList = ({ cities, clickedCoords }) => {
         <div className="city-list-container">
             <h3 className="city-list-title">{title}</h3>
             <ul className="city-list">
-                // Dans CityList.jsx, modifiez la partie li
                 {cities.map(city => (
                     <li key={city.id} className="city-item">
                         <div className="city-main-info">
                             <span className="city-name">{city.name}</span>
-                            {/* Affichage de la distance si elle existe et est > 0 */}
-                            {city.distance > 0 && (
+                            {city.distance !== null && city.distance !== undefined && city.distance > 0 && (
                                 <span className="city-distance">
                                     {city.distance.toFixed(1)} km
                                 </span>
                             )}
                         </div>
                         <div className="city-details">
-                            <span className="city-region">{city.region}</span>
                             <span className="city-pop">Pop: {city.population.toLocaleString()}</span>
                         </div>
                     </li>

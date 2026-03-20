@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="252609ea-d53e-4d48-baeb-142f699c0b08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/CItyList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/CityList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/backend/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/controller/CityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/model/City.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/interactive_card/backend/repository/CityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CItyList.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CityList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CityList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CityList.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

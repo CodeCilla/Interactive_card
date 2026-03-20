@@ -10,14 +10,13 @@ import java.util.List;
 @Repository
 public interface CityRepository extends JpaRepository<City, Long> {
 
-    @Query(value = "SELECT *, " +
-            "CASE WHEN :lat IS NOT NULL AND :lon IS NOT NULL " +
-            "THEN ST_Distance(geom::geography, ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)::geography) / 1000 " +
-            "ELSE 0 END as distance " +
-            "FROM cities WHERE population >= :minPop " +
-            "AND (:region = '' OR region = :region) " +
-            "AND (:lat IS NULL OR :lon IS NULL OR ST_DWithin(geom::geography, ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)::geography, :radius * 1000)) " +
-            "ORDER BY distance ASC, population DESC LIMIT :limit",
+    @Query(value = "SELECT c.*, " +
+            "ST_Distance(c.geom::geography, ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)::geography) / 1000 AS distance " +
+            "FROM cities c " +
+            "WHERE c.population >= :minPop " +
+            "AND (:region = '' OR c.region = :region) " +
+            "AND ST_DWithin(c.geom::geography, ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)::geography, :radius * 1000) " +
+            "ORDER BY distance ASC",
             nativeQuery = true)
     List<City> findFilteredCities(
             @Param("minPop") int minPop,
